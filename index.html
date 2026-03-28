@@ -1186,5 +1186,12 @@
     setTimeout(() => showToast('📱 Add FairRent to your home screen!'), 3000);
   });
 </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/fair-rent-app/sw.js');
+    });
+  }
+</script>
 </body>
 </html>
